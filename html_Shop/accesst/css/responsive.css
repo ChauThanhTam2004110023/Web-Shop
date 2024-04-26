@@ -1,0 +1,111 @@
+/* header */
+/* .grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+} */
+
+/* mobile && tablets */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+    .hide-on-mobile-table {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .header__cart-list-item {
+        width: 100%;
+        right: 0;
+        position: fixed;
+        background-color: #fff;
+        box-shadow: 0 0 10px #ccc;
+    }
+    .app__container {
+        margin: 100px 0;
+    }
+    .header__sort-bar {
+        display: flex;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-table {
+        display: none;
+    }
+    .grid__column-10 {
+        width: calc(120% - 20%);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .m-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.3333%;
+    }
+    .mobile-category {
+        display: block;
+    }
+    .footer {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 740px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header__with-search {
+        justify-content: space-between;
+    }
+    .header__mobile-search-icon {
+        display: block;
+    }
+    .header__cart,
+    .header__navbar-logo {
+        width: unset;   
+    }
+    .header__search {
+        position: fixed;
+        top: 70px;
+        z-index: 1;
+        width: 100%;
+        box-shadow: 0 0 10px #ccc;
+        animation: mobileSearchSideIn linear 0.3s;
+        display: none;
+    }
+    .header__search-checkbox:checked ~ .header__search {
+        display: flex;
+    }
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            top: 50px;
+        }
+        to {
+            opacity: 1;
+            top: 70px;
+        }
+    }
+    .grid__column-10 {
+        width: calc(120% - 20%);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .c-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .mobile-category {
+        display: block;
+    }
+    .footer {
+        padding: 0 20px;
+    }
+
+}
